@@ -43,8 +43,10 @@ class Predict:
         self.accident_carac = [array]
 
     def get_gravity(self):
-        labels = ['mort', 'hopital', 'blesse', 'sauf']
-        return "\n\nl'accidenté est peut-être " + labels[self.model.predict(np.array([self.accident_carac]))[0]-1]
+        labels = ['mort', 'gravement blessé', 'blessé', 'sauf']
+        precision = [0.12, 0.42, 0.32, 0.51]
+        grav = self.model.predict(np.array([self.accident_carac]))[0]-1
+        return "\n\nl'accidenté est " + labels[grav] + "\nprécision de : " + str(precision[grav])
 
 
 if __name__ == '__main__':
