@@ -45,7 +45,7 @@ class Predict:
             " pluie\n3:forte pluie\n4:neige\n5:brouillard\n6:fort"
             " vent\n7:temps orageux\n8:temps nuageux\n9:autre\n",
             "Numéro du département:\n",
-            "à quel quart d'heure l'accident s'est t'il"
+            "vers quel quart d'heure l'accident s'est t'il"
             " passé?\n0\n15\n30\n45\n",
             "à quel heure de la journée l'accident s'est t'il passé?\n",
             "sur quel route l'accident s'est passé?\n1:autoroute\n2:route"
@@ -70,14 +70,14 @@ class Predict:
     def get_answers(self):
         """ask every question about the accident"""
         for i in range(len(self.question_array)):
-            self.ask(i)
+            self.accident_carac.append(self.ask(i))
 
     def ask(self, question_number):
         """ask a question"""
         answer = int(input(self.question_array[question_number]))
         while answer not in self.answer_range[question_number]:
             answer = int(input(self.question_array[question_number]))
-
+        return answer
     def get_gravity(self):
         """with the answer given predict the gravity of the accident"""
         labels = ["sain et sauf", "blessé", "gravement blessé"]
