@@ -31,30 +31,30 @@ class Predict:
         self.question_array = [
             "entrez le mois:\n",
             "entrez le jour:\n",
-            "quel était la visibilité?\n1:plein jour\n2:le crépuscule ou la"
+            "quelle était la visibilité?\n1:plein jour\n2:le crépuscule ou la"
             " nuit\n3:la nuit sans éclairage public\n4:la nuit avec éclairage"
-            " public éteind\n5:la nuit avec éclairage public allumé\n",
+            " public éteint\n5:la nuit avec éclairage public allumé\n",
             "était-ce hors agglomération? \n1:oui\n2:non\n",
             "ou était-ce?\n1:en dehors d'une intersection\n2:Dans une"
             " intersection en X\n3:Dans une intersection en T\n4:Dans une"
             " intersection en Y\n5:Dans une intersection avec 4"
             " branches\n6:Dans un giratoire\n7:Dans une route sans voie de"
-            " passage\n8:Dans un passage à niveaux\n9:Une intersection"
+            " passage\n8:Dans un passage à niveau\n9:Une intersection"
             " différente\n",
             "quel était la condition atmosphérique?\n1:beau temps\n2:faible"
             " pluie\n3:forte pluie\n4:neige\n5:brouillard\n6:fort"
             " vent\n7:temps orageux\n8:temps nuageux\n9:autre\n",
             "Numéro du département:\n",
-            "vers quel quart d'heure l'accident s'est t'il"
+            "vers quel quart d'heure l'accident s'est-il"
             " passé?\n0\n15\n30\n45\n",
-            "à quel heure de la journée l'accident s'est t'il passé?\n",
-            "sur quel route l'accident s'est passé?\n1:autoroute\n2:route"
+            "à quelle heure de la journée l'accident s'est-il passé?\n",
+            "sur quelle route l'accident s'est passé?\n1:autoroute\n2:route"
             " nationale\n3:route départementale\n4:route communale\n5:route en"
             " dehors du service public\n6:parking\n9:autre\n",
             "quel était le type de route?\n1:une unique"
             " voie\n2:bidirectionel\n3:bidirectionel séparées par un"
             " obstacle\n4:autre\n",
-            "Combien y'a t'il de voie supplémentaire?\n",
+            "Combien y'a-t-il de voie supplémentaire?\n",
             "Quel est le profile de la route?\n1:plat\n2:pente\n3:haut d'une"
             " colline\n4:bas d'une colline\n",
             "condition de la route?\n1:normal\n2:mouillée\n3:flaque"
