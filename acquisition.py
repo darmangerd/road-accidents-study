@@ -8,13 +8,11 @@ class Acquisition:
     __df_vehicles: pd.DataFrame
 
     def __init__(self):
-        self.__df_caractersitics = pd.read_csv(
-            'datas/caracteristics.csv', encoding='latin-1')
+        self.__df_caractersitics = pd.read_csv('datas/caracteristics.csv', dtype={'lat': str, 'long': str})
         self.__clean_caracteristics()
         self.__df_users = pd.read_csv('datas/users.csv')
         self.__clean_users()
-        self.__df_places = pd.read_csv(
-            'datas/places.csv')
+        self.__df_places = pd.read_csv('datas/places.csv')
         self.__clean_places()
         self.__df_vehicles = pd.read_csv('datas/vehicles.csv')
         self.__clean_vehicles()
@@ -47,7 +45,7 @@ class Acquisition:
             return df.loc[(df[list(kwargs)] == pd.Series(kwargs)).all(axis=1)]
         return df
 
-    def get_vehicles(self, vehicule_type=None):
+    def get_vehicles(self):
         df = self.__df_vehicles
         del_keys = []
         for i in kwargs.keys():
