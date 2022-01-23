@@ -11,12 +11,14 @@ class Acquisition:
 
     def __init__(self):
         self.__df_caractersitics = pd.read_csv(
-            "datas/caracteristics.csv", encoding="latin-1"
+            "datas/caracteristics.csv",
+            encoding="latin-1",
+            dtype={"lat": str, "long": str},
         )
         self.__clean_caracteristics()
         self.__df_users = pd.read_csv("datas/users.csv")
         self.__clean_users()
-        self.__df_places = pd.read_csv("datas/places.csv")
+        self.__df_places = pd.read_csv("datas/places.csv", dtype="unicode")
         self.__clean_places()
         self.__df_vehicles = pd.read_csv("datas/vehicles.csv")
         self.__clean_vehicles()
