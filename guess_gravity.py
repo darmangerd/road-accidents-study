@@ -78,6 +78,7 @@ class Predict:
         while answer not in self.answer_range[question_number]:
             answer = int(input(self.question_array[question_number]))
         return answer
+
     def get_gravity(self):
         """with the answer given predict the gravity of the accident"""
         labels = ["sain et sauf", "blessé", "gravement blessé"]
